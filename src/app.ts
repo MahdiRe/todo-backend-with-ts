@@ -2,8 +2,10 @@ import express, { Request, Response, NextFunction} from "express";
 import {json} from "body-parser";
 import { todoRouter } from "./routers/todos";
 import mongoose from "mongoose";
+import cors from 'cors'
 
 const app = express();
+app.use(cors())
 app.use(json());
 app.use('/todo', todoRouter);
 

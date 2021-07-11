@@ -14,8 +14,8 @@ router.post("/", async (req: Request, res: Response) => {
     console.log(req.body)
     const todo = new Todo({
         title: req.body.title,
-        active_state: req.body.active_state,
-        end_date: req.body.end_date
+        activeState: req.body.activeState,
+        endDate: req.body.endDate
     })
 
     try {
@@ -37,7 +37,7 @@ router.put('/:id', async (req: Request, res:Response) => {
     var todo = []
     try {
         todo = await Todo.findById(req.params.id)
-        todo.active_state = "Done"
+        todo.activeState = "Done"
         const newTodo = new Todo(todo)
         await newTodo.save()
         res.send("Updated successfully")

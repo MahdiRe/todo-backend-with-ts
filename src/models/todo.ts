@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 export interface ITodo { 
     title: string,
-    active_state: string,
-    end_date: string
+    activeState: string,
+    endDate: string
 }
 
 // interface TodoModelInterface extends mongoose.Model<TodoDoc> {
@@ -21,11 +21,11 @@ const todoSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    active_state: {
+    activeState: {
         type: String,
         required: true
     },
-    end_date: {
+    endDate: {
         type: String,
         required: true
     },
