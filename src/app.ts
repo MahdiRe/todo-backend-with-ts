@@ -9,7 +9,7 @@ app.use(cors())
 app.use(json());
 app.use('/todo', todoRouter);
 
-mongoose.connect('mongodb://localhost/todo-app', {
+mongoose.connect('mongodb+srv://admin:admin321@cluster0.fy6wk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
